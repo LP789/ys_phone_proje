@@ -6,7 +6,6 @@
 			<img alt="" src="" id="show_work"/>
 		</div>
 		<div class="w_up_cont clearfix">
-			<a href="javascript:;">上传</a>
 		</div>
 		<ul class="set_list">
 			<li class="clearfix">
@@ -16,14 +15,14 @@
 				</div>
 			</li>
 			<li class="clearfix">
+				<h3>作品简介<span>*</span></h3>
+        		<div class="pub_thumb"><textarea name="thumb" placeholder="请输入简介"></textarea></div>
+			</li>
+			<li class="clearfix">
 				<h3>作品链接<span>*</span></h3>
 				<div class="input_cont">
 					<input type="text" name="" class="id_input name" id="work_url">
 				</div>
-			</li>
-			<li class="clearfix">
-				<a class="w_url_up">
-					<input type="file" id="up_file_input">浏览</a>
 			</li>
 		</ul>
 		<div class="up_submit_btn">提交</div>
@@ -76,6 +75,7 @@
 	padding: 0 0.1rem;
 	border: 1px solid #e1e1e1;
 	font-size: 0.24rem;
+	width: 100%;
 }
 .input_cont .id_textarea{
 	height: 2.04rem;
@@ -94,7 +94,7 @@
 .input_cont .id_input.name{ width: 5.6rem; }
 .input_cont .id_input.u_name{ width: 2.53rem; }
 .input_cont .id_input.sex{ width: 1.7rem; }
-.input_cont .id_input.mid{ width: 3.92rem; }
+/*.input_cont .id_input.mid{ width: 3.92rem; }*/
 .input_cont .id_input.u_age{ width: 2.04rem; }
 .input_cont .id_input.u_work{ width: 2.04rem; }
 .set_list li .b_year,

@@ -7,7 +7,6 @@
 				<select class="v_s_li">
 					<option>video</option>
 				</select>
-				<a class="v_more fr">更多>></a>
 			</div>
 			<div class="v_item_bk">
 				<div class="v_cont">
@@ -48,13 +47,15 @@
 					<div class="v_show">播放   6740<span>|</span>喜欢   5 </div>
 				</div>
 			</div>
+	    <div class="more">
+	      <button class="">加载更多</button>
+	    </div>
 	</section>
 	<!--文章-->
 	<section class="article">
 		<div class="v_div clearfix" style="padding: 0.34rem 0;">
 			<span class="title">文章</span>
 			<span class="v_s_li">article</span>
-			<a class="v_more fr">更多>></a>
 		</div>
 		<div class="v_a_bk">
 			<img alt="" src="~assets/persion_center/images/bk_item_1.jpg" class="m_pic"/>
@@ -74,12 +75,14 @@
 				<span class="hd_name">付彬彬</span>
 			</div>
 		</div>
+	    <div class="more">
+	      <button class="">加载更多</button>
+	    </div>
 	</section>
 	<section>
 		<div class="tec_hd clearfix">
 			<span class="title">技术交流</span>
 			<span class="v_s_li">technical exchange</span>
-			<a class="v_more fr">更多>></a>
 		</div>
 		<div class="tec_item">
 			<div class="item_cont">
@@ -102,6 +105,9 @@
 				<span class="icon_send">转发：12346</span>
 			</p>
 		</div>
+	    <div class="more">
+	      <button class="">加载更多</button>
+	    </div>
 	  </section>
     </div>
   </div>

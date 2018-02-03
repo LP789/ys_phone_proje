@@ -1,38 +1,56 @@
 <template>
-<div>
-  <section class="tec_hd clearfix">
-    <div class="tec_tit">
-      <h2>技术交流</h2>
-      <p class="sub_tit">technical exchange</p>
+    <div>
+      <section class="tec_hd clearfix">
+        <div class="tec_tit">
+          <h2>神吐槽</h2>
+          <p class="sub_tit">TuCao</p>
+        </div>
+        <!-- <a href="javascript:;" class="pub_btn">发布</a> -->
+        <router-link to="/skill/publish" class="pub_btn">发布</router-link>
+      </section>
+      <section class="tec_list">
+        <div class="tec_item" v-for="i in 4"  @click="goDetail(i)">
+          <div class="item_cont">
+            <img src="~assets/technical/product_hd_1.png" alt="" class="li_pic">
+            <h2>慕容雪雪</h2>
+            <h3>2017-09-29</h3>
+            <h2>影视文案必须明白的五条军规</h2>
+            <div class="item_info">
+              何为影视文案？<br/>
+              影视文案的必备技能有哪些？<br/>
+              影视文案与平面文案的区别在哪里?<br/>
+              文案创作是个痛苦的过程，创作文案是件快乐的事情。
+            </div>
+            <a class="follow">+关注</a>
+            <img alt="" src="~assets/technical/product_1.jpg" class="item_pic">
+          </div>
+          <p class="tec_op">
+            <span class="icon_comment">评论：123</span>
+            <span class="icon_love">喜欢：123</span>
+            <span class="icon_send">转发：12346</span>
+          </p>
+        </div>
+        <div class="more">
+          <button class="">加载更多</button>
+        </div>
+
+      </section>
     </div>
-    <a href="javascript:;" class="pub_btn">发布</a>
-  </section>
-  <!--发布内容输入-->
-  <section class="publish_in">
-    <div class="publish_file">
-      <img src="" class="upload_pic">
-      <div class="upload_btn">
-        <input type="file" name="" class="fileUpload">
-        <img alt="" src="~assets/technical/camera.png">
-      </div>
-    </div>
-    <h2><input type="text" placeholder="请输入标题"></h2>
-    <div class="pub_thumb"><textarea name="thumb" placeholder="请输入简介"></textarea></div>
-    <div class="pub_cont">
-      <textarea name="content" placeholder="请输入正文......"></textarea>
-    </div>
-  </section>
-</div>
 </template>
 
 <script>
     export default {
-        name: "publish",
+        name: "index",
         data() {
             return {}
         },
-        methods: {},
+        methods: {
+          goDetail(id){
+            this.$router.push({path:`/tucao/detail/${id}`})
+          }
+        },
         mounted() {
+
         }
     }
 </script>
@@ -403,22 +421,9 @@
     border-bottom: 1px solid #e1e1e1;
   }
   .publish_in >h2 input{width: 6rem;}
-  .pub_thumb{
-    padding: 0 0.2rem;
-    margin-top: 0.36rem;
-    margin-bottom: 0.8rem;
-  }
-  .pub_thumb textarea{
-    width: 100%;
-    height: 2rem;
-    border: 1px solid #e1e1e1;
-    padding: 0.1rem;
-    font-size: 0.24rem;
-    color: #c0c0c0;
-  }
   .pub_cont{
     padding: 0 0.2rem;
-    margin-top: 0.36rem;
+    margin-top: 0.66rem;
     margin-bottom: 0.8rem;
   }
   .pub_cont textarea{
@@ -428,5 +433,17 @@
     padding: 0.1rem;
     font-size: 0.24rem;
     color: #c0c0c0;
+  }
+  .more{
+  }
+  .more button{
+    font-size: .3rem;
+    background-color: #ffbc22;
+    color: #fff;
+    width: 3rem;
+    margin: .3rem auto;
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
   }
 </style>

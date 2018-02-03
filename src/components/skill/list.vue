@@ -30,6 +30,9 @@
             <span class="icon_send">转发：12346</span>
           </p>
         </div>
+        <div class="more">
+          <button class="">加载更多</button>
+        </div>
 
       </section>
     </div>
@@ -430,5 +433,17 @@
     padding: 0.1rem;
     font-size: 0.24rem;
     color: #c0c0c0;
+  }
+  .more{
+  }
+  .more button{
+    font-size: .3rem;
+    background-color: #ffbc22;
+    color: #fff;
+    width: 3rem;
+    margin: .3rem auto;
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
   }
 </style>

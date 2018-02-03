@@ -70,6 +70,9 @@
 				</div>
 			</div>
 		</div>
+	    <div class="more">
+	      <button class="">加载更多</button>
+	    </div>
   </div>
 </template>
 

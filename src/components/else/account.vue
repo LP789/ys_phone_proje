@@ -5,10 +5,15 @@
 	</section>
 	<!--基本信息-->
 	<section class="person_info">
+		<div class="l_operation clearfix">
+			<a href="javascript:;" class="l_btns active">+关注</a>
+			<a href="javascript:;" class="l_btns">私信</a>
+			<a href="javascript:;" class="l_break"><img alt="" src="~assets/persion_center/break.png"></a>
+		</div>
 		<div class="p_info">
 			<img alt="" src="~assets/persion_center/images/p_c_hd.jpg" class="hd"/>
 			<h2 class="dib">姜博</h2>&nbsp;&nbsp;&nbsp;&nbsp;
-			<p class="grade_p dib"><span class="dib"><span class="grade dib"></span></span><span>星级</span></p>
+			<p class="grade_p"><span class="dib"><span class="grade dib"></span></span><span>星级</span></p>
 			<h3>摄影 <span>|</span>剪辑师 <span>|</span>导演</h3>
 			<p><span>年龄：</span>27&nbsp;
 				<span>发布数：</span>90&nbsp;
@@ -38,12 +43,10 @@
         data() {
           return {
             liArr:[
-              {value:'作品',url:'/account/works'},
-              {value:'文章',url:'/account/article'},
-              {value:'喜欢',url:'/account/love'},
-              {value:'圈子',url:'/account/circle'},
-              {value:'简介',url:'/account/self'},
-              {value:'与我相关',url:'/account/about'},
+              {value:'作品',url:'/else/1/works'},
+              {value:'文章',url:'/else/1/article'},
+              {value:'喜欢',url:'/else/1/love'},
+              {value:'简介',url:'/else/1/jianjie'},
             ],
 
           }
@@ -67,6 +70,45 @@
 }
 .person_info{
 	padding: 0.3rem 0.1rem 0.2rem;
+}
+/*特殊*/
+.l_operation{
+	position: absolute;
+	padding-right: 0.2rem;
+	z-index: 1;
+	right: 0;
+}
+.l_operation a{ 
+	font-size: 0;
+	display: block;
+	height: 0.5rem;
+	float: right;
+	margin-left: 0.2rem;
+}	
+.l_operation .l_break{
+	border: 1px solid #e1e1e1;
+	border-radius: 0.06rem;
+	width: 0.5rem;
+	text-align: center;
+	padding-top: 0.14rem;
+}
+.l_operation .l_break img{
+	width: 0.22rem;
+	height: 0.22rem;
+}
+.l_operation .l_btns{
+	border: 1px solid #e1e1e1;
+	border-radius: 0.06rem;
+	width: 1.2rem;
+	line-height: 0.48rem;
+	text-align: center;
+	font-size: 0.24rem;
+	color: #7b7b7b;
+}
+.l_operation .l_btns.active{
+	background-color: #ffbc22;
+	color: #fff;
+	border: 1px solid #ffbc22;
 }
 .p_info{
 	width: 100%;
@@ -139,7 +181,7 @@
 	height: 0.7rem;
 	line-height: 0.7rem;
 	float: left;
-	width: 16.6%;
+	width: 25%;
 	text-align: center;
 	font-size: 0.28rem;
 }

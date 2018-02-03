@@ -56,7 +56,9 @@
 				<p class="c_com_txt">评论&nbsp;670<span>|</span>
 				赞&nbsp;(120)</p>
 			</div>
-			<a href="javascript:;" class="load_more">加载更多</a>
+		    <div class="more">
+		      <button class="">加载更多</button>
+		    </div>
 		</div>
 </div>
 </template>
@@ -227,6 +229,8 @@
 	font-size: 0.24rem;
 	line-height: 0.24rem;
 	color: #898686;
+	width: 1rem;
+    line-height: .4rem;
 }
 .circle_bk .c_com_txt span{
 	padding: 0 0.2rem;

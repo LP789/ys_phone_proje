@@ -65,7 +65,7 @@
           <router-link to="/skill/list" class="more">MORE&gt;&gt;</router-link>
         </div>
         <ul class="hr_item clearfix">
-          <li v-for="i in 4">
+          <router-link tag="li" to="/else/1" v-for="i in 4">
             <div class="h_pic">
               <img src="~assets/index/head_pic_1.png">
             </div>
@@ -73,7 +73,7 @@
             <p class="job"><span>导演</span>|<span>摄影指导</span>|<span>摄影助理</span></p>
             <p class="work">代表作：《Shine with you中国移动宣传片》</p>
             <p class="work">《佳音》微电影</p>
-          </li>
+          </router-link tag="li">
 
         </ul>
       </section>

@@ -24,10 +24,8 @@
 					熟悉“芒果台”的人或多或少都对“彭宥纶”这个名字有所耳闻。从2007年参与“快男”比赛视觉制作至今。。。
 				</p>
 			</div>
+			<a href="javascript:;" class="load_more">加载更多</a>
 		</div>
-	    <div class="more">
-	      <button class="">加载更多</button>
-	    </div>
 	</section>
 </div>
 </template>

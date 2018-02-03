@@ -2,8 +2,8 @@
     <div>
       <section class="tec_hd clearfix">
         <div class="tec_tit">
-          <h2>你问我答</h2>
-          <p class="sub_tit">Ask and answer</p>
+          <h2>神吐槽</h2>
+          <p class="sub_tit">TuCao</p>
         </div>
         <a href="javascript:;" class="pub_btn">发布</a>
       </section>

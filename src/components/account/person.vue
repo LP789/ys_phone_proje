@@ -115,7 +115,7 @@
 			<li class="clearfix">
 				<h3>技能标签</h3>
 				<div class="input_cont">
-					<textarea class="id_textarea"></textarea>
+					<textarea class="id_textarea" placeholder="多个技能之间用“、”分割"></textarea>
 				</div>
 			</li>
 			<li class="clearfix">
