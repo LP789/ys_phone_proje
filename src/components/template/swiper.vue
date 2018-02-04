@@ -16,8 +16,7 @@
 
 
 <script>
-  import { baseUrl ,userId}  from '../../api/config.js'
-  import axios  from '../../commonJs/http'
+
   import 'swiper/dist/css/swiper.css'
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   export default {
@@ -53,13 +52,7 @@
     },
     //定义这个sweiper对象
     computed: {
-      axios.get(baseUrl+ 'get_jishu_four')
-      .then(function (res) {
-        console.log(res)
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
+
 
 
 

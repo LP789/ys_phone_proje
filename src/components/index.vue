@@ -126,7 +126,7 @@
             .catch(function (error) {
               console.log(error)
             })
-          axios.post(baseUrl+ 'ajax_get_article',{
+          axios.get(baseUrl+ 'ajax_get_article',{
               start:6,
           })
             .then(function (res) {
