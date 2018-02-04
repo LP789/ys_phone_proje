@@ -1,8 +1,7 @@
 <template>
-<div>
-	<section>
-		<!--视频展示-->
-		<div class="v_video">
+  <div>
+  	<div class="v_video">
+	  <section>
 			<div class="v_div clearfix">
 				<span class="title">视频</span>
 				<select class="v_s_li">
@@ -12,7 +11,7 @@
 			</div>
 			<div class="v_item_bk">
 				<div class="v_cont">
-					<img alt="" src="~assets/persion_center/images/other_works_1.jpg" />
+					<img alt="" src="~assets/persion_center/images/c_big_pic_2.jpg" />
 					<p class="v_cont_info">纪录片 - 旅行</p>
 				</div>
 				<h2>SUMMER IN DUBAI!</h2>
@@ -25,7 +24,7 @@
 			</div>
 			<div class="v_item_bk">
 				<div class="v_cont">
-					<img alt="" src="~assets/persion_center/images/other_works_2.jpg" />
+					<img alt="" src="~assets/persion_center/images/c_big_pic_4.jpg" />
 					<p class="v_cont_info">纪录片 - 旅行</p>
 				</div>
 				<h2>SUMMER IN DUBAI!</h2>
@@ -38,7 +37,7 @@
 			</div>
 			<div class="v_item_bk">
 				<div class="v_cont">
-					<img alt="" src="~assets/persion_center/images/other_works_3.jpg" />
+					<img alt="" src="~assets/persion_center/images/c_big_pic_3.jpg" />
 					<p class="v_cont_info">纪录片 - 旅行</p>
 				</div>
 				<h2>SUMMER IN DUBAI!</h2>
@@ -49,7 +48,6 @@
 					<div class="v_show">播放   6740<span>|</span>喜欢   5 </div>
 				</div>
 			</div>
-		</div>
 	</section>
 	<!--文章-->
 	<section class="article">
@@ -59,7 +57,7 @@
 			<a class="v_more fr">更多>></a>
 		</div>
 		<div class="v_a_bk">
-			<img alt="" src="~assets/persion_center/images/other_works_04.jpg" class="m_pic"/>
+			<img alt="" src="~assets/persion_center/images/bk_item_1.jpg" class="m_pic"/>
 			<h2>专访：姜博——年轻的偏执狂</h2>
 			<p class="txt">从2007年  与“快男”比赛视觉制作至今，他先后多次挑起了“湖卫”选秀，跨年晚会, 张杰等人个人演唱会整体视觉呈现的重担...</p>
 			<div class="clearfix au_info">
@@ -68,7 +66,7 @@
 			</div>
 		</div>
 		<div class="v_a_bk">
-			<img alt="" src="~assets/persion_center/images/other_works_04.jpg" class="m_pic"/>
+			<img alt="" src="~assets/persion_center/images/bk_item_2.jpg" class="m_pic"/>
 			<h2>旅行感悟《WHAT IS FREEDOM》</h2>
 			<p class="txt">从2007年  与“快男”比赛视觉制作至今，他先后多次挑起了“湖卫”选秀，跨年晚会, 张杰等人个人演唱会整体视觉呈现的重担...</p>
 			<div class="clearfix au_info">
@@ -77,17 +75,51 @@
 			</div>
 		</div>
 	</section>
-</div>
+	<section>
+		<div class="tec_hd clearfix">
+			<span class="title">技术交流</span>
+			<span class="v_s_li">technical exchange</span>
+			<a class="v_more fr">更多>></a>
+		</div>
+		<div class="tec_item">
+			<div class="item_cont">
+				<img src="~assets/technical/product_hd_1.png" alt="" class="li_pic">
+				<h2>慕容雪雪</h2>
+				<h3>2017-09-29</h3>
+				<h2>影视文案必须明白的五条军规</h2>
+				<div class="item_info">
+					何为影视文案？<br/>
+					影视文案的必备技能有哪些？<br/>
+					影视文案与平面文案的区别在哪里?<br/>
+					文案创作是个痛苦的过程，创作文案是件快乐的事情。
+				</div>
+				<a class="follow">+关注</a>
+				<img alt="" src="~assets/technical/product_1.jpg" class="item_pic">
+			</div>
+			<p class="tec_op">
+				<span class="icon_comment">评论：123</span>
+				<span class="icon_love">喜欢：123</span>
+				<span class="icon_send">转发：12346</span>
+			</p>
+		</div>
+	  </section>
+    </div>
+  </div>
+
 </template>
 
 <script>
     export default {
-        name: "identity",
+        name: "works",
         data() {
-            return {}
+          return {
+          }
         },
         methods: {},
         mounted() {
+        },
+        computed:{
+        	tit_li_active(){return '喜爱';}
         }
     }
 </script>
@@ -100,7 +132,6 @@
 	width: 7.5rem;
 }
 .person_info{
-	position: relative;
 	padding: 0.3rem 0.2rem 0.2rem;
 }
 .p_info{
@@ -141,11 +172,11 @@
 }
 .p_info p span.d_y{
 	padding-left: 0.3rem;
-	background:url("../~assets/persion.png") left center no-repeat;
+	background:url("~assets/persion.png") left center no-repeat;
 }
 .p_info p span.add{
 	padding-left: 0.3rem;
-	background:url("../~assets/p_location.png") left center no-repeat;
+	background:url("~assets/p_location.png") left center no-repeat;
 }
 
 .tit_li{
@@ -261,7 +292,6 @@
 /*文章·*/
 .article{
 	padding: 0 0.2rem;
-	margin-bottom: 1rem;
 }
 .v_a_bk{
 	padding-left: 3.3rem;
@@ -423,44 +453,5 @@
 .tec_item .tec_op .icon_send{
 	background:url("~assets/persion_center/send.png") left center no-repeat;
 	background-size: auto 0.22rem;
-}
-/*特殊*/
-.l_operation{
-	position: absolute;
-	padding-right: 0.2rem;
-	z-index: 1;
-	right: 0;
-}
-.l_operation a{ 
-	font-size: 0;
-	display: block;
-	height: 0.5rem;
-	float: right;
-	margin-left: 0.2rem;
-}	
-.l_operation .l_break{
-	border: 1px solid #e1e1e1;
-	border-radius: 0.06rem;
-	width: 0.5rem;
-	text-align: center;
-	padding-top: 0.14rem;
-}
-.l_operation .l_break img{
-	width: 0.22rem;
-	height: 0.22rem;
-}
-.l_operation .l_btns{
-	border: 1px solid #e1e1e1;
-	border-radius: 0.06rem;
-	width: 1.2rem;
-	line-height: 0.48rem;
-	text-align: center;
-	font-size: 0.24rem;
-	color: #7b7b7b;
-}
-.l_operation .l_btns.active{
-	background-color: #ffbc22;
-	color: #fff;
-	border: 1px solid #ffbc22;
 }
 </style>

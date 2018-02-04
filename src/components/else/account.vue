@@ -1,80 +1,65 @@
 <template>
-<div>
-		<div class="p_c_circle">
-			<h2 class="tit_hd">
-				<span>圈子动态</span> Dynamic circle
-			</h2>
-			<div class="circle_bk">
-				<img alt="" src="~assets/persion_center/c_hd_pic.png" class="hd_pic"/>
-				<p class="c_time">09-16 20:25</p>
-				<h3>吴琼   在 《行走》 发布了图片</h3>
-				<ul class="img_li clearfix">
-					<li><img alt="" src="~assets/persion_center/images/c_item_1.jpg"></li>
-					<li><img alt="" src="~assets/persion_center/images/c_item_2.jpg"></li>
-				</ul>
-				<p class="c_com_txt">评论&nbsp;670<span>|</span>
-				赞&nbsp;(120)</p>
-			</div>
-			<div class="circle_bk">
-				<img alt="" src="~assets/persion_center/c_hd_pic.png" class="hd_pic"/>
-				<p class="c_time">09-16 20:25</p>
-				
-				<h3>BlingBling于转发了付彬彬的原创作品</h3>
-				<p class="item_txt_tit">SUMMER IN DUBAI! </p>
-				<p class="item_txt">SUMMER IN DUBAI! 新浪微博@HENRY哥哥哥</p>
-				<div class="c_big_pic">
-					<img alt="" src="~assets/persion_center/images/c_big_pic.jpg" />
-				</div>
-				<p class="c_com_txt">评论&nbsp;670<span>|</span>
-				赞&nbsp;(120)</p>
-			</div>
-			<div class="circle_bk">
-				<img alt="" src="~assets/persion_center/c_hd_pic.png" class="hd_pic"/>
-				<p class="c_time">09-16 20:25</p>
-				<h3>付彬彬发表了文章</h3>
-				
-				<p class="item_txt_tit">演员、场景照明——如何构思场景的照明设置</p>
-				<p class="item_txt">照明可看作两件相互关联的事情——其一是为演员照明，特别要注意他们的脸。</p>
-				<div class="c_big_pic">
-					<img alt="" src="~assets/persion_center/images/c_big_pic_2.jpg" />
-				</div>
-				<p class="c_com_txt">评论&nbsp;670<span>|</span>
-				赞&nbsp;(120)</p>
-			</div>
-			<div class="circle_bk">
-				<img alt="" src="~assets/persion_center/c_hd_pic.png" class="hd_pic"/>
-				<p class="c_time">09-16 20:25</p>
-				<h3>BlingBling于在 清新纪录短片《西伯利亚冬日之旅》发布了8张图</h3>
-				
-				<ul class="img_li clearfix">
-					<li><img alt="" src="~assets/persion_center/images/c_item_3.jpg"></li>
-					<li><img alt="" src="~assets/persion_center/images/c_item_4.jpg"></li>
-					<li><img alt="" src="~assets/persion_center/images/c_item_5.jpg"></li>
-					<li><img alt="" src="~assets/persion_center/images/c_item_6.jpg"></li>
-				</ul>
-				
-				<p class="c_com_txt">评论&nbsp;670<span>|</span>
-				赞&nbsp;(120)</p>
-			</div>
-		    <div class="more">
-		      <button class="">加载更多</button>
-		    </div>
+  <div>
+  	<section class="p_c_banner">
+		<img alt="" src="~assets/persion_center/images/p_c_banner.jpg"/>
+	</section>
+	<!--基本信息-->
+	<section class="person_info">
+		<div class="l_operation clearfix">
+			<a href="javascript:;" class="l_btns active">+关注</a>
+			<a href="javascript:;" class="l_btns">私信</a>
+			<a href="javascript:;" class="l_break"><img alt="" src="~assets/persion_center/break.png"></a>
 		</div>
-</div>
+		<div class="p_info">
+			<img alt="" src="~assets/persion_center/images/p_c_hd.jpg" class="hd"/>
+			<h2 class="dib">姜博</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+			<p class="grade_p"><span class="dib"><span class="grade dib"></span></span><span>星级</span></p>
+			<h3>摄影 <span>|</span>剪辑师 <span>|</span>导演</h3>
+			<p><span>年龄：</span>27&nbsp;
+				<span>发布数：</span>90&nbsp;
+				<span>点赞数：</span>900&nbsp;
+			</p>
+			<p>
+				<span>粉丝：</span>797&nbsp;
+				<span>关注：</span>9&nbsp;
+				<span class="d_y"></span><span>导演</span>&nbsp;
+				<span class="add"></span><span>北京</span>
+			</p>
+		</div>
+	</section>
+	<!--分类选项-->
+	<section>
+		<ul class="tit_li clearfix">
+			<router-link tag='li' v-for="item in liArr" :to="item.url" :key="item.url" :class="tit_li_active==item.value?'active':''" @onclick="tit_li_active({}, item.value)">{{ item.value}}</router-link>
+		</ul>
+		<router-view></router-view>
+	</section>
+  </div>
 </template>
 
 <script>
     export default {
-        name: "identity",
+        name: "works",
         data() {
           return {
+            liArr:[
+              {value:'作品',url:'/else/1/works'},
+              {value:'文章',url:'/else/1/article'},
+              {value:'喜欢',url:'/else/1/love'},
+              {value:'简介',url:'/else/1/jianjie'},
+            ],
+
           }
         },
         methods: {},
         mounted() {
         },
         computed:{
-        	tit_li_active(){return '圈子';}
+        	tit_li_active(data, d){
+        		console.log("li 切换", d); 
+        		data='作品'; 
+        		return data;
+        	},
         }
     }
 </script>
@@ -84,12 +69,65 @@
 	width: 7.5rem;
 }
 .person_info{
-	padding: 0.3rem 0.2rem 0.2rem;
+	padding: 0.3rem 0.1rem 0.2rem;
+}
+/*特殊*/
+.l_operation{
+	position: absolute;
+	padding-right: 0.2rem;
+	z-index: 1;
+	right: 0;
+}
+.l_operation a{ 
+	font-size: 0;
+	display: block;
+	height: 0.5rem;
+	float: right;
+	margin-left: 0.2rem;
+}	
+.l_operation .l_break{
+	border: 1px solid #e1e1e1;
+	border-radius: 0.06rem;
+	width: 0.5rem;
+	text-align: center;
+	padding-top: 0.14rem;
+}
+.l_operation .l_break img{
+	width: 0.22rem;
+	height: 0.22rem;
+}
+.l_operation .l_btns{
+	border: 1px solid #e1e1e1;
+	border-radius: 0.06rem;
+	width: 1.2rem;
+	line-height: 0.48rem;
+	text-align: center;
+	font-size: 0.24rem;
+	color: #7b7b7b;
+}
+.l_operation .l_btns.active{
+	background-color: #ffbc22;
+	color: #fff;
+	border: 1px solid #ffbc22;
 }
 .p_info{
 	width: 100%;
 	position: relative;
 	padding-left: 1.3rem;
+}
+.p_info .grade_p{
+	padding-top: 0;
+}
+.p_info .grade_p > span:nth-of-type(1){
+	width: 1rem;
+    height: 0.2rem;
+    background-color: #fff;
+    font-size: 0;
+}
+.p_info .grade_p .grade{
+	width: .5rem;
+    height: 0.2rem;
+    background-color: #ffbc22;
 }
 .p_info .hd{
 	width: 1.08rem;
@@ -102,6 +140,7 @@
 	font-size: 0.32rem;
 	line-height: 0.32rem;
 	color: #051936;
+	max-width: 2rem;
 }
 .p_info h3{
 	font-size: 0.24rem;
@@ -130,25 +169,29 @@
 	padding-left: 0.3rem;
 	background:url("~assets/p_location.png") left center no-repeat;
 }
-
 .tit_li{
 	border-top: 1px solid #e1e1e1;
 	border-bottom: 1px solid #e1e1e1;
 }
 .tit_li li.active{
 	border-bottom: 0.04rem solid #ffbc22;
+	color: #333;
 }	
 .tit_li li{
 	height: 0.7rem;
 	line-height: 0.7rem;
 	float: left;
-	width: 20%;
+	width: 25%;
 	text-align: center;
+	font-size: 0.28rem;
 }
 .tit_li li a{
 	display: block;
 	color: #8e939b;
 	font-size: 0.28rem;
+}
+.tit_li li.active a{
+	color: #333;
 }
 /*简介样式*/
 .p_c_article{ 
@@ -178,7 +221,7 @@
 	padding: 0.2rem 0.2rem 0.5rem; 
 }
 .p_c_circle .tit_hd{
-	padding: 0 0 0.2rem;
+	padding: 0.5rem 0;
 	font-size: 0.24rem;
 	color: #8e939b;
 }
@@ -229,8 +272,6 @@
 	font-size: 0.24rem;
 	line-height: 0.24rem;
 	color: #898686;
-	width: 1rem;
-    line-height: .4rem;
 }
 .circle_bk .c_com_txt span{
 	padding: 0 0.2rem;

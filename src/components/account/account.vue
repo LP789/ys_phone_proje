@@ -25,7 +25,7 @@
 	<!--分类选项-->
 	<section>
 		<ul class="tit_li clearfix">
-			<router-link tag='li' v-for="item in liArr" :to="item.url" :key="item.url">{{ item.value}}</router-link>
+			<router-link tag='li' v-for="item in liArr" :to="item.url" :key="item.url" :class="tit_li_active==item.value?'active':''" @onclick="tit_li_active({}, item.value)">{{ item.value}}</router-link>
 		</ul>
 		<router-view></router-view>
 	</section>
@@ -41,12 +41,12 @@
         data() {
           return {
             liArr:[
-              {value:'作品',url:'works'},
-              {value:'文章',url:'article'},
-              {value:'喜欢',url:'love'},
-              {value:'圈子',url:'circle'},
-              {value:'简介',url:'self'},
-              {value:'与我相关',url:'about'},
+              {value:'作品',url:'/account/works'},
+              {value:'文章',url:'/account/article'},
+              {value:'喜欢',url:'/account/love'},
+              {value:'圈子',url:'/account/circle'},
+              {value:'简介',url:'/account/self'},
+              {value:'与我相关',url:'/account/about'},
             ],
 
           }
@@ -65,7 +65,11 @@
             })
         },
         computed:{
-        	tit_li_active(){return 'account';}
+        	tit_li_active(data, d){
+        		console.log("li 切换", d); 
+        		data='作品'; 
+        		return data;
+        	},
         }
     }
 </script>
@@ -81,6 +85,9 @@
 	width: 100%;
 	position: relative;
 	padding-left: 1.3rem;
+}
+.p_info .grade_p{
+	padding-top: 0;
 }
 .p_info .grade_p > span:nth-of-type(1){
 	width: 1rem;
@@ -104,6 +111,7 @@
 	font-size: 0.32rem;
 	line-height: 0.32rem;
 	color: #051936;
+	max-width: 2rem;
 }
 .p_info h3{
 	font-size: 0.24rem;

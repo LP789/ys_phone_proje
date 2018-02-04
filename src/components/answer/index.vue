@@ -6,7 +6,7 @@
   <!--你问我答user-->
   <section class="a_p_show">
     <div class="a_p_head pr">
-      <h2>你问我答</h2>
+      <router-link tag="h2" to="/answer/list">你问我答</router-link>
       <i class="line"></i>
       <p>Ask and answer</p>
       <a href="javascript:;" class="pub_pro" @click="goPublish">发布问题</a>
@@ -53,10 +53,10 @@
   <!--我来吐槽-->
   <section class="a_p_show">
     <div class="a_p_head pr">
-      <h2>神吐槽</h2>
+      <router-link tag="h2" to="/tucao/list">神吐槽</router-link>
       <i class="line"></i>
       <p>God Tucao</p>
-      <a href="javascript:;" class="pub_pro">来吐槽</a>
+      <router-link to="/tucao/publich" class="pub_pro">来吐槽</router-link>
     </div>
     <div class="tocao_info">
       <div class="main_info">

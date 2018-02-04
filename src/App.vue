@@ -6,13 +6,13 @@
     <router-view style="margin-top:0.9rem"></router-view>
     <Ft v-show="ftShow"></Ft>
     </div>
-  <!--回到顶部-->
-  <a href="#" v-show="backtop" class="break_top_a">
-    <div class="break_top">
-      <img alt="" src="~assets/community/back_top.png" />
-      <p>返回顶部</p>
-    </div>
-  </a>
+    <!--回到顶部-->
+    <a href="#" v-show="backtop" class="break_top_a">
+      <div class="break_top">
+        <img alt="" src="~assets/community/back_top.png" />
+        <p>返回顶部</p>
+      </div>
+    </a>
   </div>
 </template>
 
@@ -101,7 +101,7 @@ abbr, acronym { border: none; font-variant: normal;}
 del { text-decoration: line-through; }
 hr{border:0;height:1px; background-color: #D9D9D9;}
 ul, li, ol { list-style: none; }
-input, textarea, select { font-family: inherit; font-size: inherit; font-weight: inherit }
+input, textarea, select { font-family: inherit; font-size: inherit; font-weight: inherit;}
 button, input { border: 0;background: 0;outline: 0 }
 a {-webkit-touch-callout: none; text-decoration: none; color: #666666; outline: 0; cursor: pointer;}
 a:hover{ text-decoration: none; }
@@ -154,6 +154,7 @@ label {cursor:pointer;}
   max-width: 750px;
   margin: 0 auto;
 }
+input{background-color: #fff;}
 /*返回顶部*/
 .icontainer {
   height: 100%;
@@ -194,4 +195,47 @@ label {cursor:pointer;}
   width: .6rem;
   padding: 0;
 }
+/*页面公共部分*/
+/*加载更多*/
+  .more{
+  }
+  .more button{
+    font-size: .3rem;
+    background-color: #ffbc22;
+    color: #fff;
+    width: 3rem;
+    margin: .3rem auto;
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
+  }
+/*详情页的评论数*/
+  .tec_op{
+    margin-top: 0.4rem;
+    font-size: 0;
+    /*padding-left: 0.88rem;*/
+    text-align: center;
+  }
+  .tec_op span{
+    /*padding-left: 0.38rem;*/
+    display: inline-block;
+    margin-right: 0.26rem;
+    font-size: 0.24rem;
+    color: #9b9b9b;
+    margin-bottom: 0.1rem;
+  }
+  /* 作品简介 */
+  .pub_thumb{
+    padding: 0 0.2rem;
+    margin-top: 0.36rem;
+    margin-bottom: 0.3rem;
+  }
+  .pub_thumb textarea{
+    width: 100%;
+    height: 1.5rem;
+    border: 1px solid #e1e1e1;
+    padding: 0.1rem;
+    font-size: 0.24rem;
+    color: ##1e2126;
+  }
 </style>

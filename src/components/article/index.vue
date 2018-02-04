@@ -41,6 +41,9 @@
       </div>
       <img alt="" src="~assets/persion_center/images/acticlel_4.jpg" :class="{'all_pic':true,'left': index % 2  == 1}"/>
     </div>
+    <div class="more">
+      <button class="">加载更多</button>
+    </div>
 
 
   </section>
@@ -219,5 +222,17 @@
     height: 2.39rem;
   }
   .all_ar_bk .all_pic.left{ float: left;}
-
+  
+  .all-article .more{
+  }
+  .all-article .more button{
+    font-size: .3rem;
+    background-color: #ffbc22;
+    color: #fff;
+    width: 3rem;
+    margin: .3rem auto;
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
+  }
 </style>

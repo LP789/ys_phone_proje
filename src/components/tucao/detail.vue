@@ -1,41 +1,101 @@
 <template>
     <div>
       <section class="tec_hd clearfix">
-        <div class="tec_tit">
-          <h2>你问我答</h2>
-          <p class="sub_tit">Ask and answer</p>
-        </div>
-        <a href="javascript:;" class="pub_btn">发布</a>
-      </section>
-      <!--发布内容输入-->
-      <section class="publish_in">
-        <div class="publish_file">
-          <img src="" class="upload_pic">
-          <div class="upload_btn">
-            <input type="file" name="" class="fileUpload">
-            <img alt="" src="~assets/technical/camera.png">
+      <div class="tec_tit">
+        <h2>神吐槽</h2>
+        <p class="sub_tit">TuCao</p>
+      </div>
+      <a href="javascript:;" class="pub_btn" @click="goPublish">发布</a>
+    </section>
+      <!--个人信息详情-->
+      <section class="tec_list">
+        <div class="tec_item">
+          <div class="item_cont">
+            <img src="~assets/ask_answer/a_hd_pic_1.jpg" alt="" class="li_pic">
+            <h2>Cherish</h2>
+            <h3>2017-09-29</h3>
+            <h2>哪部影视作品的哪一幕让你直接泪崩了？</h2>
+            <div class="item_info">
+              你看过的哪些影视剧让你一瞬间泪崩了？<br/>
+              是哪个导演拍的呢？<br/>
+              主要演员是谁？<br/>
+              剧情是怎样的？
+            </div>
+            <a class="follow">+关注</a>
+            <img alt="" src="~assets/ask_answer/a_info_pic.jpg" class="item_pic">
           </div>
-        </div>
-        <h2><input type="text" placeholder="请输入标题"></h2>
-        <div class="pub_thumb"><textarea name="thumb" placeholder="请输入简介"></textarea></div>
-        <div class="pub_cont">
-          <textarea name="content" placeholder="请输入正文......"></textarea>
-          <p class="hidde_name">
-            <input type="checkbox" name="" id="hid_name"><label for="hid_name">匿名</label>
+          <p class="tec_op">
+            <span class="icon_comment">评论：123</span>
+            <span class="icon_love">喜欢：123</span>
+            <span class="icon_send">转发：12346</span>
+            <span class="icon_look">浏览：12346</span>
           </p>
         </div>
-
+      </section>
+      <!--评论内容-->
+      <section class="comment_txt">
+        <div class="c_txt_li">
+          <h2 class="clearfix">回答<span>(28)</span>
+            <a href="javascript:;">我要回答</a>
+          </h2>
+          <div class="c_t_item">
+            <img alt="" src="~assets/technical/product_hd_1.png" class="c_t_p">
+            <div class="in_comment">
+              <textarea placeholder="请输入回答内容"></textarea>
+            </div>
+          </div>
+          <div class="c_replay_item">
+            <img alt="" src="~assets/technical/product_hd_1.png" class="c_t_p">
+            <h2>
+              <span class="u_name">上古天真</span>
+              <span class="u_time"> 09-27 16:01</span>
+            </h2>
+            <p>《小鞋子》妹妹的鞋子拿去补，让哥哥不小心弄丢了，家里妈妈生病，没钱买新鞋。因为怕被爸爸打，所以也不敢告诉爸妈。。。</p>
+            <div class="c_option">
+              回复<span>|</span>赞(0)
+            </div>
+          </div>
+          <div class="c_replay_item">
+            <img alt="" src="~assets/technical/product_hd_1.png" class="c_t_p">
+            <h2>
+              <span class="u_name">ENTROPIE</span>
+              <span class="u_time"> 09-27 16:01</span>
+            </h2>
+            <p>《死亡诗社》如果你在一个恰当的年纪看到了这部影片，或多或少都能有一些触动和思考。当然我们可能会继续「屈服」于现实，摒弃所有自己的兴趣。。。</p>
+            <div class="c_option">
+              <span>回复</span>|<span>赞(0)</span>
+            </div>
+          </div>
+          <div class="c_replay_item">
+            <img alt="" src="~assets/technical/product_hd_1.png" class="c_t_p">
+            <h2>
+              <span class="u_name">A-WEI</span>
+              <span class="u_time"> 09-27 16:01</span>
+            </h2>
+            <p class="songti">从技术层面讲，提案比方案简单。提案，只是一个初步思路。</p>
+            <div class="c_option">
+              <span>回复</span>|<span>赞(0)</span>
+            </div>
+          </div>
+        </div>
+        <div class="more">
+          <button class="">更多评论</button>
+        </div>
       </section>
     </div>
 </template>
 
 <script>
     export default {
-        name: "publish",
+        name: "detail",
         data() {
             return {}
         },
-        methods: {},
+        methods: {
+          goPublish(){
+            this.$router.push({path:`/answer/publish`})
+          }
+        },
         mounted() {
         }
     }
@@ -131,19 +191,6 @@
     right: 0;
     max-width: 2.18rem;
     max-height: 1.50rem;
-  }
-  .tec_item .tec_op{
-    margin-top: 0.4rem;
-    font-size: 0;
-    padding-left: 0.88rem;
-  }
-  .tec_item .tec_op span{
-    padding-left: 0.38rem;
-    display: inline-block;
-    margin-right: 0.26rem;
-    font-size: 0.24rem;
-    color: #9b9b9b;
-    margin-bottom: 0.1rem;
   }
   .tec_item .tec_op .icon_comment{
     background:url("~assets/technical/comment.png") left center no-repeat;
@@ -531,14 +578,6 @@
     padding: 0 0.2rem;
     border-bottom: 1px solid #e1e1e1;
   }
-  .publish_in >h2 input{
-    width: 100%;
-    line-height: 0.76rem;
-    font-size: 0.32rem;
-    color: #1e2126;
-    padding: 0 0.2rem;
-    border-bottom: 1px solid #e1e1e1;
-  }
   .pub_cont{
     padding: 0 0.2rem;
     margin-top: 0.66rem;
@@ -550,7 +589,7 @@
     border: 1px solid #e1e1e1;
     padding: 0.1rem;
     font-size: 0.24rem;
-    color: #1e2126;
+    color: #c0c0c0;
   }
   .publish_in .hidde_name{
     padding: 0 0.2rem;
@@ -561,5 +600,17 @@
   .publish_in .hidde_name input{
     width: 0.3rem;
     height: 0.3rem;
+  }
+  .more{
+  }
+  .more button{
+    font-size: .3rem;
+    background-color: #ffbc22;
+    color: #fff;
+    width: 3rem;
+    margin: .3rem auto;
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
   }
 </style>

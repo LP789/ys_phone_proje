@@ -14,7 +14,7 @@
 					<img alt="" src="~assets/technical/persion_he_pic.png">
 				</span>
         <!-- <span class="file_up" to="/account/works">上传作品</span> -->
-        <router-link to="/account/works" class="file_up">上传作品</router-link>
+        <router-link to="/account/workupload" class="file_up">上传作品</router-link>
       </div>
     </div>
     <!-- 用户未登录显示 -->
@@ -243,7 +243,7 @@
   }
   .hd_person_li li{
     height: 0.8rem;
-    padding: 0.3rem 0 0 0.44rem;
+    padding: 0.3rem 0 0 0;
     font-size: 0.35rem;
     width: 2rem;
     text-align: center;

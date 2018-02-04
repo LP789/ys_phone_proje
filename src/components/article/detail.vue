@@ -82,6 +82,9 @@
         </div>
       </div>
     </div>
+    <div class="more">
+      <button class="">更多评论</button>
+    </div>
   </section>
 </div>
 </template>
@@ -224,7 +227,7 @@
   }
   /*评论*/
   .comment_txt{
-    padding:0.68rem 0.2rem 1.7rem 0.2rem;
+    padding:0.68rem 0.2rem .7rem 0.2rem;
   }
   .c_txt_li h2{
     font-size: 0.32rem;
@@ -303,6 +306,18 @@
   }
   .c_replay_item .c_option span{
     padding: 0 0.1rem;
+  }
+  .more{
+  }
+  .more button{
+    font-size: .3rem;
+    background-color: #ffbc22;
+    color: #fff;
+    width: 3rem;
+    margin: .3rem auto;
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
   }
 
 </style>

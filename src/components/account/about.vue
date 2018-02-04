@@ -55,7 +55,7 @@
 				<a class="follow">关注</a>
 			</div>
 			<p class="tec_op">
-				<span class="icon_comment">评论：123</span>
+				<span class="icon_comment">评论：1234</span>
 				<span class="icon_love">喜欢：123</span>
 				<span class="icon_send">转发：123</span>
 				<span class="icon_look">浏览：123</span>
@@ -225,35 +225,6 @@
 	max-width: 2.18rem;
 	max-height: 2rem;
 }
-.tec_item .tec_op{
-	margin-top: 0.4rem;
-	font-size: 0;
-}
-.tec_item .tec_op span{
-	padding-left: 0.32rem;
-	display: inline-block;
-	margin-right: 0.2rem;
-	font-size: 0.24rem;
-	color: #9b9b9b;
-}
-.tec_item .tec_op .icon_comment{
-	background:url("~assets/persion_center/comment.png") left center no-repeat;
-	background-size: auto 0.22rem;
-}
-.tec_item .tec_op .icon_love{
-	background:url("~assets/persion_center/love.png") left center no-repeat;
-	background-size: auto 0.22rem;
-}
-.tec_item .tec_op .icon_send{
-	background:url("~assets/persion_center/send.png") left center no-repeat;
-	background-size: auto 0.22rem;
-}
-.tec_item .tec_op .icon_look{
-	background:url("~assets/persion_center/eye.png") left center no-repeat;
-	background-size: auto 0.22rem;
-	padding-left: 0.36rem;
-	margin-right: 0;
-}
 
 /*图片在右*/
 .item_r_pic{
@@ -315,35 +286,6 @@
 	font-size: 0.22rem;
 	border: 1px solid #ffbc22;
 	color: #ffbc22;
-}
-.item_r_pic .tec_op{
-	margin-top: 0.4rem;
-	font-size: 0;
-}
-.item_r_pic .tec_op span{
-	padding-left: 0.32rem;
-	display: inline-block;
-	margin-right: 0.2rem;
-	font-size: 0.24rem;
-	color: #9b9b9b;
-}
-.item_r_pic .tec_op .icon_comment{
-	background:url("~assets/persion_center/comment.png") left center no-repeat;
-	background-size: auto 0.22rem;
-}
-.item_r_pic .tec_op .icon_love{
-	background:url("~assets/persion_center/love.png") left center no-repeat;
-	background-size: auto 0.22rem;
-}
-.item_r_pic .tec_op .icon_send{
-	background:url("~assets/persion_center/send.png") left center no-repeat;
-	background-size: auto 0.22rem;
-}
-.item_r_pic .tec_op .icon_look{
-	background:url("~assets/persion_center/eye.png") left center no-repeat;
-	background-size: auto 0.22rem;
-	padding-left: 0.36rem;
-	margin-right: 0;
 }
 .paging{
 	text-align: center;

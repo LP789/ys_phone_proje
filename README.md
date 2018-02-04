@@ -1,6 +1,6 @@
-# y
+# ys_phone_project
 
-> y
+> ys_phone_project
 
 ## Build Setup
 
@@ -20,7 +20,7 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-##参考资料
+## 参考资料
 1、vux样式库[guide](https://vux.li/#/)
 2、vue2 框架 官网[guide](https://cn.vuejs.org/)
 3、vue-router 前台路由 官网[guide](https://router.vuejs.org/zh-cn/)

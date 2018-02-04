@@ -78,6 +78,9 @@
             </div>
           </div>
         </div>
+        <div class="more">
+          <button class="">更多评论</button>
+        </div>
       </section>
     </div>
 </template>
@@ -188,19 +191,6 @@
     right: 0;
     max-width: 2.18rem;
     max-height: 1.50rem;
-  }
-  .tec_item .tec_op{
-    margin-top: 0.4rem;
-    font-size: 0;
-    padding-left: 0.88rem;
-  }
-  .tec_item .tec_op span{
-    padding-left: 0.38rem;
-    display: inline-block;
-    margin-right: 0.26rem;
-    font-size: 0.24rem;
-    color: #9b9b9b;
-    margin-bottom: 0.1rem;
   }
   .tec_item .tec_op .icon_comment{
     background:url("~assets/technical/comment.png") left center no-repeat;
@@ -610,5 +600,17 @@
   .publish_in .hidde_name input{
     width: 0.3rem;
     height: 0.3rem;
+  }
+  .more{
+  }
+  .more button{
+    font-size: .3rem;
+    background-color: #ffbc22;
+    color: #fff;
+    width: 3rem;
+    margin: .3rem auto;
+    display: block;
+    height: .5rem;
+    border-radius: .25rem;
   }
 </style>

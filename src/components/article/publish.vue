@@ -2,8 +2,8 @@
 <div>
   <section class="tec_hd clearfix">
     <div class="tec_tit">
-      <h2>技术交流</h2>
-      <p class="sub_tit">technical exchange</p>
+      <h2>文章</h2>
+      <p class="sub_tit">article</p>
     </div>
     <a href="javascript:;" class="pub_btn">发布</a>
   </section>

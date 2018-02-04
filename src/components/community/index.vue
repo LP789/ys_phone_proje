@@ -141,13 +141,13 @@
   <!--其他影片-->
   <section class="cu_block">
     <div class="cu_bk_head mt46">
-      <h2>其他影片</h2>
+      <router-link tag="h2" to="/film/list">其他影片</router-link>
       <i class="line"></i>
       <p>other films</p>
     </div>
     <div class="video_bk">
       <div class="v_source">
-        <img alt="" src="~assets/community/video_pic_1.jpg" />
+        <img alt="" src="~assets/community/video_pic_1.jpg" @click="GoDetail('film', 1)"/>
         <p>纪录片-旅行</p>
       </div>
       <div class="v_info">
@@ -189,6 +189,11 @@
             return {}
         },
         methods: {
+          GoDetail(type,id){
+            if(type=="film"){
+              this.$router.push(`/film/detail/${id}`);
+            }
+          },
         },
         mounted() {
         }
@@ -284,10 +289,10 @@
   position: absolute;
   left: 0.06rem;
   top: 0.06rem;
-  width: 0.24rem;
-  height: 0.24rem;
+  width: 0.4rem;
+  height: 0.4rem;
   background-color: #ffbc22;
-  line-height: 0.22rem;
+  line-height: 0.32rem;
   text-align: center;
   font-size: 24px;
   color: #fff;
