@@ -112,21 +112,23 @@
         },
         mounted() {
             console.log(baseUrl,userId)
-         axios.post(baseUrl+ 'get_new_user')
+         axios.get(baseUrl+ 'get_rand_jishu_four')
            .then(function (res) {
              console.log(res)
            })
            .catch(function (error) {
              console.log(error)
            })
-          axios.post(baseUrl+ 'get_jishu_four')
+          axios.get(baseUrl+ 'get_jishu_four')
             .then(function (res) {
               console.log(res)
             })
             .catch(function (error) {
               console.log(error)
             })
-          axios.post(baseUrl+ 'get_new_user')
+          axios.post(baseUrl+ 'ajax_get_article',{
+              start:6,
+          })
             .then(function (res) {
               console.log(res)
             })

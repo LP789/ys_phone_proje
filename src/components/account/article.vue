@@ -33,17 +33,29 @@
 </template>
 
 <script>
+  import { baseUrl ,userId}  from '../../api/config.js'
+  import axios  from '../../commonJs/http'
     export default {
         name: "identity",
         data() {
           return {
+              data:'',
           }
         },
         methods: {},
         mounted() {
+          var that = this
+          axios.get(baseUrl+ 'get_user_all_work')
+            .then(function (res) {
+              that.data = res.data[0]
+              console.log(res)
+            })
+            .catch(function (error) {
+              console.log(error)
+            })
         },
         computed:{
-        	
+
         }
     }
 </script>
@@ -109,7 +121,7 @@
 }
 .tit_li li.active{
 	border-bottom: 0.04rem solid #ffbc22;
-}	
+}
 .tit_li li{
 	height: 0.7rem;
 	line-height: 0.7rem;

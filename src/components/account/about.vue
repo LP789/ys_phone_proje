@@ -73,14 +73,28 @@
 </template>
 
 <script>
+  import { baseUrl ,userId}  from '../../api/config.js'
+  import axios  from '../../commonJs/http'
     export default {
         name: "identity",
         data() {
           return {
+              data:'',
           }
         },
         methods: {},
         mounted() {
+          var that = this
+          axios.post(baseUrl+ 'get_related_to_me',{
+            userid:userId
+          })
+            .then(function (res) {
+              that.data = res.data[0]
+              console.log(res)
+            })
+            .catch(function (error) {
+              console.log(error)
+            })
         },
         computed:{
         	tit_li_active(){return '与我相关';}
@@ -150,7 +164,7 @@
 .tit_li li.active{
 	border-bottom: 0.04rem solid #ffbc22;
 	color: #333;
-}	
+}
 .tit_li li{
 	height: 0.7rem;
 	line-height: 0.7rem;
@@ -372,7 +386,7 @@
 	line-height: 0.5rem;
 	text-align: center;
 	color: #000000;
-	
+
 }
 .person_item{
 	height: 6rem;

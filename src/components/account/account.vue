@@ -7,16 +7,16 @@
 	<section class="person_info">
 		<div class="p_info">
 			<img alt="" src="~assets/persion_center/images/p_c_hd.jpg" class="hd"/>
-			<h2 class="dib">姜博</h2>&nbsp;&nbsp;&nbsp;&nbsp;
+			<h2 class="dib">{{data.name}}</h2>&nbsp;&nbsp;&nbsp;&nbsp;
 			<p class="grade_p dib"><span class="dib"><span class="grade dib"></span></span><span>星级</span></p>
 			<h3>摄影 <span>|</span>剪辑师 <span>|</span>导演</h3>
 			<p><span>年龄：</span>27&nbsp;
-				<span>发布数：</span>90&nbsp;
-				<span>点赞数：</span>900&nbsp;
+				<span>发布数：</span>{{data.fabu}}&nbsp;
+				<span>点赞数：</span>{{}}&nbsp;
 			</p>
 			<p>
-				<span>粉丝：</span>797&nbsp;
-				<span>关注：</span>9&nbsp;
+				<span>粉丝：</span>{{data.fensi}}&nbsp;
+				<span>关注：</span>{{data.guanzhu}}&nbsp;
 				<span class="d_y"></span><span>导演</span>&nbsp;
 				<span class="add"></span><span>北京</span>
 			</p>
@@ -48,16 +48,18 @@
               {value:'简介',url:'/account/self'},
               {value:'与我相关',url:'/account/about'},
             ],
+            data:'',
 
           }
         },
         methods: {},
         mounted() {
-            console.log(baseUrl,userId)
+          var that = this
           axios.post(baseUrl+ 'get_user_type',{
               userid:userId
           })
             .then(function (res) {
+              that.data = res.data[0]
               console.log(res)
             })
             .catch(function (error) {
@@ -66,9 +68,14 @@
         },
         computed:{
         	tit_li_active(data, d){
-        		console.log("li 切换", d); 
-        		data='作品'; 
-        		return data;
+            for(var i=0;i<this.liArr.length;i++){
+              if(this.liArr[i].url == this.$route.fullPath){
+        		        data = this.liArr[i].value
+        		        return data
+                }
+            }
+            data = '作品';
+            return data;
         	},
         }
     }
@@ -94,6 +101,7 @@
     height: 0.2rem;
     background-color: #fff;
     font-size: 0;
+  margin-right: .2rem;
 }
 .p_info .grade_p .grade{
 	width: .5rem;
