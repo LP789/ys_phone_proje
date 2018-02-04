@@ -33,7 +33,10 @@
 </template>
 
 <script>
-    export default {
+  import { baseUrl ,userId}  from '../../api/config.js'
+  import axios  from '../../commonJs/http'
+
+  export default {
         name: "works",
         data() {
           return {
@@ -50,6 +53,16 @@
         },
         methods: {},
         mounted() {
+            console.log(baseUrl,userId)
+          axios.post(baseUrl+ 'get_user_type',{
+              userid:userId
+          })
+            .then(function (res) {
+              console.log(res)
+            })
+            .catch(function (error) {
+              console.log(error)
+            })
         },
         computed:{
         	tit_li_active(){return 'account';}
@@ -126,7 +139,7 @@
 .tit_li li.active{
 	border-bottom: 0.04rem solid #ffbc22;
 	color: #333;
-}	
+}
 .tit_li li{
 	height: 0.7rem;
 	line-height: 0.7rem;
@@ -144,8 +157,8 @@
 	color: #333;
 }
 /*简介样式*/
-.p_c_article{ 
-	padding: 0.2rem 0.2rem 1rem; 
+.p_c_article{
+	padding: 0.2rem 0.2rem 1rem;
 }
 .p_c_article table{
 	width: 100%;
@@ -168,7 +181,7 @@
 /*简介样式*/
 /*圈子样式*/
 .p_c_circle{
-	padding: 0.2rem 0.2rem 0.5rem; 
+	padding: 0.2rem 0.2rem 0.5rem;
 }
 .p_c_circle .tit_hd{
 	padding: 0.5rem 0;
@@ -256,9 +269,9 @@
 	border-radius: 0.25rem;
 }
 /*圈子样式*/
-/*圈子_发布动态 样式*/	
+/*圈子_发布动态 样式*/
 .p_c_circle_2{
-	padding: 0.2rem 0.2rem 0.5rem; 
+	padding: 0.2rem 0.2rem 0.5rem;
 }
 .c2_hd{
 	position: relative;
@@ -333,10 +346,10 @@
 	padding-left: 0.3rem;
 	margin-bottom: 1rem;
 }
-/*圈子_发布动态*/	
+/*圈子_发布动态*/
 /*圈子_详情页样式*/
 .p_c_circle_3{
-	padding: 0.2rem 0.2rem 0.5rem; 
+	padding: 0.2rem 0.2rem 0.5rem;
 	position: relative;
 }
 .p_c_circle_3 .tit_hd{

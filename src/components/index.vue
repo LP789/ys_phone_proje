@@ -98,14 +98,41 @@
 </template>
 
 <script>
-    export default {
+  import axios  from '../commonJs/http'
+  import { baseUrl ,userId}  from '../api/config.js'
+
+  export default {
         name: "index",
         data() {
-            return {}
+            return {
+                url:''
+            }
         },
         methods: {
         },
         mounted() {
+            console.log(baseUrl,userId)
+         axios.post(baseUrl+ 'get_new_user')
+           .then(function (res) {
+             console.log(res)
+           })
+           .catch(function (error) {
+             console.log(error)
+           })
+          axios.post(baseUrl+ 'get_jishu_four')
+            .then(function (res) {
+              console.log(res)
+            })
+            .catch(function (error) {
+              console.log(error)
+            })
+          axios.post(baseUrl+ 'get_new_user')
+            .then(function (res) {
+              console.log(res)
+            })
+            .catch(function (error) {
+              console.log(error)
+            })
         }
     }
 </script>
